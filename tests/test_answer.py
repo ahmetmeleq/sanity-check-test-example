@@ -1,9 +1,8 @@
 import answer
 
-def test_correct_side():
-    assert answer.ANSWER in ("heads", "tails"), (
-        f"ANSWER must be 'heads' or 'tails', got {answer.ANSWER!r}"
-    )
+JUDGE_RECORD = "heads"
 
-def test_answer_is_set():
-    assert answer.ANSWER != "", "ANSWER must not be empty"
+def test_correct_side():
+    assert answer.ANSWER == JUDGE_RECORD, (
+        f"Expected {JUDGE_RECORD!r}, got {answer.ANSWER!r}"
+    )
